@@ -1,3 +1,5 @@
+# Linux Set up
+
 ## Gnome shortcut
 
 `ctrl-alt-t` open terminal exec of Gnome Terminal is `gnome-terminal`
@@ -6,29 +8,52 @@
 
 Note the command are gnome shell command.
 
-## Package Required 
+## Package Required
+
 g++
 
 zathura;
-zathura-pdf-poppler
+zathura-pdf-poppler; (Required for viewing pdf.)
 
 nodejs
 
+## nvim
 
-## Set up nvim:
-`sudo dnf install nvim` 
+`sudo dnf install nvim`
 
 ## Texlive
 
+## Alacritty
+
 ## Bash Config
 
-### alias
+### Appearance
+
+Using Debian Color for the prompt:
+`PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$'`
+
+### Bash Alias
 
 `c` for `clear`
 
+### Useful Functions
+
+```bash
+mkcd () {
+  case "$1" in
+    */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
+    /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1";;
+    /*) mkdir -p "$1" && cd "$1";;
+    */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1";;
+    ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
+    *) mkdir -p "./$1" && cd "./$1";;
+  esac
+}
+```
+
 ## Git Config
 
-### Alias 
+### Git Alias
 
 `git config --global alias.co checkout`
 `git config --global alias.br branch`

@@ -50,6 +50,7 @@ mkcd () {
   esac
 }
 ```
+This code is taken from [stack exchange](https://unix.stackexchange.com/questions/9123/is-there-a-one-liner-that-allows-me-to-create-a-directory-and-move-into-it-at-th)
 
 ## Git Config
 

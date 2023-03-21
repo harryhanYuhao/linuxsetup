@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++  -I/home/harryyuhaohan/study/coding/ln/gfx/include -I/home/harryyuhaohan/study/coding/ln/gfx/glut/Include -Wall -Wextra -std=c++11 $1 -lGLU -lGL -lGLEW -lglut -lX11

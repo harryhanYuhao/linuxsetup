@@ -1,3 +1,4 @@
+# Paste the following to ~/.gitconfig
 [init]
 	defaultBranch = main
 [alias]

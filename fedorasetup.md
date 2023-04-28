@@ -60,3 +60,14 @@ This code is taken from [stack exchange](https://unix.stackexchange.com/question
 `git config --global alias.br branch`
 `git config --global alias.ci commit`
 `git config --global alias.st status`
+
+## NVDIA Driver
+
+```bash
+sudo dnf install dnf-plugins-core -y
+sudo dnf copr enable t0xic0der/nvidia-auto-installer-for-fedora -y
+sudo dnf install nvautoinstall -y
+sudo dnf update --refresh
+```
+
+Use `sudo nvautoinstall --primec` to install the driver, enabling prime (switching between graphic card), etc.

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Source
+# https://github.com/maxwell-bland/i3-natural-scrolling-and-tap/blob/master/tap-to-click.sh
+
+# Get id of touchpad and the id of the field corresponding to
+# tapping to click
+id=`xinput list | grep -i "Touchpad" | cut -d'=' -f2 | cut -d'[' -f1`
+tap_to_click_id=`xinput list-props $id | \
+                      grep -i "Tapping Enabled (" \
+                      | cut -d'(' -f2 | cut -d')' -f1`
+
+# Set the property to true
+xinput --set-prop $id $tap_to_click_id 1

@@ -53,10 +53,9 @@ tiling_drag modifier titlebar
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec --no-startup-id alacritty
 
-# BUG: NOTWORKING
-# BUG: I intend to use this command to open the terminal in the same working directory 
-set $A sh ~/.config/i3/script/newWindowInSameWD.sh
-bindsym $mod+Shift+Return exec $A
+# The open terminal in the current working directory, the keybinding shall be defined
+# thourgh the terminal emulator.
+
 
 # kill focused window
 bindsym $mod+Shift+q kill

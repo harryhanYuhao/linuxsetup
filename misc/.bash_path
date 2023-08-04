@@ -1,0 +1,3 @@
+PATH=$PATH:/home/hhyh/psu/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hhyh/psu/lib
+

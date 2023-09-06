@@ -1,3 +1,6 @@
 PATH=$PATH:/home/hhyh/psu/bin
+PATH=$PATH:/home/hhyh/.local/opt/pyston_2.3.5/bin
+PATH=$PATH:~/psu/bin/tex
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hhyh/psu/lib
+
 

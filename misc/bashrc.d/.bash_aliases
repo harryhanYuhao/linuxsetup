@@ -1,4 +1,5 @@
 alias c="clear"
+alias ls="exa"
 
 mkcd () {
   case "$1" in

@@ -1,16 +1,45 @@
 # Arch Install Guide -- most succinct, necessary steps
 
-### Set fonts
+## Boot removable meidum
+
+### Visibility 
+
+#### Set fonts
 
 If the fonts are too small, to save your eyes you can set a bigger font by `setfont sun12x22`. (with an x letter)
 
-### Bootloader
+#### Set brightness
+
+See [brightness] (https://wiki.archlinux.org/title/Backlight)
+
+### Partition
+
+### Mount the Partition
+
+### bootstrap
+
+`pacstrap -K /mnt base linux linux-firmware base-devel`
+
+### Generate fstab
+
+`genfstab -U /mnt >> /mnt/etc/fstab`
+
+### Enter chroot
+
+`arch-chroot /mnt`
+
+#### Installing packages
+
+As we are in chroot environemnt, we can install packages with pacman.
+
+Install networkmanager and enable it
+
+Installing the bootloader shall be the last step of installation.
+
+#### Bootloader
 
 I recommend grub as the boot loader. 
 
-### Network
-
-Install networkmanager and enable it
 
 ```bash
 pacman -S networkmanager

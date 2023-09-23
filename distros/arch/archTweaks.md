@@ -20,8 +20,15 @@ Your hostname, which was shown on the shell prompt, is stored in `/etc/hostname`
 - `openssh`
 - `firefox`
 - `libva-intel-driver`
+- `xclip`: clip board provider
 
 Althought `pacman` many times are more than sufficient, to gain access to AUR which contains a plethora of community driven packages, we need a AUR helper.
+
+### Fonts
+
+For unicode support, install `noto-fonts`: `pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji`
+
+For cute emojis, install `nerd-fonts` with pacman. (About 5 Gib)
 
 ## Graphical User Interface
 
@@ -31,4 +38,5 @@ Sometimes a GUI is convenient. Certain application, including most web browsers,
 
 Install `hyprland`, `kitty`, `gtk3`, `xdg-desktop-portal-hyprland`, `pipewire`, `mako`, `qt5-wayland`, `qt6-wayland`.
 
+Note, to open kitty, you need `gtk3` packages.
 

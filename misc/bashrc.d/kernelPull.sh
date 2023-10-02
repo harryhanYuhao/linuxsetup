@@ -1,7 +1,5 @@
 declare update
 
-[ -d ~/linux ] || exit 0
-
 if ! [ -f ~/.cache/kernelPull ]; then
 	touch ~/.cache/kernelPull
 	update=1
@@ -19,7 +17,7 @@ function pullKernel {
 	git pull
 }
 
-if [ $update ]; then
+if [[ $update &&  -d ~/linux ]]; then
 	date -Idate > ~/.cache/kernelPull
 	(nohup pullKernel > /dev/null 2>&1 &)
 	echo Pulling Kernel! 

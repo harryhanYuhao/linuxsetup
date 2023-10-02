@@ -26,5 +26,8 @@
 `mod ctrl shift l` - lock screen
 `mod ctrl Backspace` - enter system mode to sleep, shutdown, etc.
 
+## Dependencies
 
+- `jq` - for parsing json
+- `scrot` - for taking screenshots
 

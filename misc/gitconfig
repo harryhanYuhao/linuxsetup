@@ -2,6 +2,8 @@
 [init]
 	defaultBranch = main
 [alias]
+  ps = push
+  pl = pull
 	st = status
 	ci = commit
 	co = checkout

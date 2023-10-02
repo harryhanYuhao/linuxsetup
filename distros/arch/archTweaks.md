@@ -34,6 +34,10 @@ For cute emojis, install `nerd-fonts` with pacman. (About 5 Gib)
 
 Sometimes a GUI is convenient. Certain application, including most web browsers, depend on GUI.
 
+### Audio
+
+Install and enable pulseaudio
+
 ### Hyprland
 
 Install `hyprland`, `kitty`, `gtk3`, `xdg-desktop-portal-hyprland`, `pipewire`, `mako`, `qt5-wayland`, `qt6-wayland`.

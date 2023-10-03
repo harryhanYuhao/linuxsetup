@@ -13,16 +13,32 @@ help(){
 }
 
 install(){
-	echo todo!
-}
+	if [[ -f ~/.bashrc ]]; then
+		echo "file ~/.bashrc exist! create backup and replace it? (y/n)"
+	fi 
+	read answer
+	if [[ "$answer" == "y" ]]; then
+		cp ./bashrc ~/.bashrc --backup=t
+	fi
+	unset answer
 
-update(){
-	cp -r ~/.bashrc.d -t .
-	mv .bashrc.d bashrc.d
-	cp -r ~/.bashrc.cmd.d -t .
-	mv .bashrc.cmd.d bashrc.cmd.d
-	cp ~/.bashrc -t .
-	mv .bashrc bashrc
+	if [[ -d ~/.bashrc.d ]]; then
+		echo "file ~/.bashrc.d exist! create backup and replace it? (y/n)"
+	fi 
+	read answer
+	if [[ "$answer" == "y" ]]; then
+		cp ./bashrc.d ~/.bashrc.d -r --backup=t
+	fi
+	unset answer
+
+	if [[ -d ~/.bashrc.cmd.d ]]; then
+		echo "file ~/.bashrc.cmd.d exist! create backup and replace it? (y/n)"
+	fi 
+	read answer
+	if [[ "$answer" == "y" ]]; then
+		cp ./bashrc.cmd.d ~/.bashrc.cmd.d -r --backup=t
+	fi
+	unset answer
 }
 
 while getopts ":hiup" option; do
@@ -33,10 +49,6 @@ while getopts ":hiup" option; do
 			;;
 		i)
 			install
-			exit 0
-			;;
-		u)
-			update
 			exit 0
 			;;
 		\?)

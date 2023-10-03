@@ -23,6 +23,7 @@ if [ -d ~/.bashrc.d ]; then
 		fi
 	done
 fi
+
 unset rc
 
 export PATH=$PATH:/home/hhyh/.graalvm-jdk-20.0.1+9.1/bin
@@ -55,13 +56,3 @@ fi
 # PS1='\u@\h:\w\$\n'
 
 unset color_prompt force_color_prompt
-
-. "$HOME/.cargo/env"
-
-[ -f "/home/hhyh/.ghcup/env" ] && source "/home/hhyh/.ghcup/env" # ghcup-env
-
-
-# set fonts
-
-# setfont sun12x22
-

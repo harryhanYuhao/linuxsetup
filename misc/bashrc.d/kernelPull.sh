@@ -15,10 +15,12 @@ fi
 function pullKernel {
 	cd ~/linux
 	git pull
+	if [ $? -eq 0 ]; then
+		date -Idate > ~/.cache/kernelPull
+	fi
 }
 
 if [[ $update &&  -d ~/linux ]]; then
-	date -Idate > ~/.cache/kernelPull
-	(nohup pullKernel > /dev/null 2>&1 &)
+	(pullKernel &)
 	echo Pulling Kernel! 
 fi

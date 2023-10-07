@@ -30,6 +30,22 @@ For unicode support, install `noto-fonts`: `pacman -S noto-fonts noto-fonts-cjk 
 
 For cute emojis, install `nerd-fonts` with pacman. (About 5 Gib)
 
+## Sound 
+
+By default all sound channels may be muted. To unmute, install `alsa-utils` and unmute the channels
+
+```bash
+pacman -S alsa-utils
+amixer sset Master unmute
+amixer sset Speaker unmute
+amixer sset Headphones unmute
+amixer sset Master 100%
+amixer sset Speaker 100%
+amixer sset Headphones 100%
+
+speaker-test # test the speakers
+```
+
 ## Graphical User Interface
 
 Sometimes a GUI is convenient. Certain application, including most web browsers, depend on GUI.

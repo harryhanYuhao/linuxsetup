@@ -14,6 +14,12 @@ See [brightness] (https://wiki.archlinux.org/title/Backlight)
 
 ### Partition
 
+The partition of the disk depends on the booting method.
+
+It is recommanded to use UEFI for all modern hardware (since 2015). Only consider bios boot if your hardware dates before that.
+
+
+
 ### Mount the Partition
 
 ### bootstrap
@@ -40,6 +46,9 @@ Installing the bootloader shall be the last step of installation.
 
 I recommend grub as the boot loader. 
 
+#### Network
+
+To connect to internet after reboot, install `networkmanager` and enable it.
 
 ```bash
 pacman -S networkmanager

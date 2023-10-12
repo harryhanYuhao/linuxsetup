@@ -5,7 +5,7 @@
 ### Disable the PC speaker
 
 When inputting a invalid command in the terminal, an irritating bell sound would be played. 
-To disable it system-wise, create a new file name `disable-beep.sh` in `/etc/profile.d/` add `setterm -blength 0`.
+To disable it system-wise, create a new file name `disable-beep.sh` in `/etc/profile.d/` and append `setterm -blength 0`.
 
 ### Hostname
 

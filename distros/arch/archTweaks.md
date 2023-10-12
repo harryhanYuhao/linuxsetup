@@ -27,6 +27,9 @@ Your hostname, which was shown on the shell prompt, is stored in `/etc/hostname`
 - `firefox`
 - `libva-intel-driver`
 - `xclip`: clip board provider
+- `zathura; zathura-pdf-poppler`: pdf viewer
+- `texlive`: latex
+- `biber`: latex reference tool
 
 Althought `pacman` many times are more than sufficient, to gain access to AUR which contains a plethora of community driven packages, we need a AUR helper.
 

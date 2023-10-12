@@ -7,6 +7,12 @@
 When inputting a invalid command in the terminal, an irritating bell sound would be played. 
 To disable it system-wise, create a new file name `disable-beep.sh` in `/etc/profile.d/` and append `setterm -blength 0`.
 
+Or, if it did not work, you may disable the kernel modules that controls the pc speaker:
+
+```bash
+rmmod pcspkr; rmmod snd_pcsp
+```
+
 ### Hostname
 
 Your hostname, which was shown on the shell prompt, is stored in `/etc/hostname`. Edit it (or create if necessary) to change your hostname.

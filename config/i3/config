@@ -42,9 +42,6 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xset s 300 
 
 # exec --no-startup-id xss-lock -l -- i3lock --nofork
-# NOTE: i3CustomLock is a customized command i wrote and put into PATH. Replace it with i3lock
-# 
-exec --no-startup-id xss-lock -l -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -236,6 +233,7 @@ bar {
 
 set $i3lockwall sh ~/.config/i3/script/lock.sh
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
+exec --no-startup-id xss-lock -l -- ~/.config/i3/script/lock.sh --nofork
 
 # set $nextworkspace sh ~/.config/i3/script/next.sh
 # bindsym $mod+Ctrl+Right exec --no-startup-id $nextworkspace

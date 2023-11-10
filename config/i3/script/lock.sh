@@ -1,7 +1,16 @@
+#!/bin/sh
+
 img=/tmp/i3lock.png
 scrot --silent -o $img
 convert $img -scale 10% -scale 1000% $img
 
-i3lock -u -i $img
+# check the average brightness of the screen shot.
+luminosity=`convert $img -print "%[mean]" $img`
 
-# sleep 60; pgrep i3lock && xset dpms force off
+#only fuzzy lock if the brightness is greator than the threshold
+#Otherwise the 
+if [ $luminosity>100 ]; then
+	i3lock -i $img
+else 
+	i3lock 
+fi

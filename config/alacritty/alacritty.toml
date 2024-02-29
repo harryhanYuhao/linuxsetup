@@ -1,0 +1,49 @@
+[colors.bright]
+black = "0x88807c"
+blue = "0x48b9c7"
+cyan = "0x34e2e2"
+green = "0x73c48f"
+magenta = "0xad7fa8"
+red = "0xf15d22"
+white = "0xeeeeec"
+yellow = "0xffce51"
+
+[colors.primary]
+background = "0x101010"
+foreground = "0xffffff"
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "Fira Code Nerd Font Ret"
+
+[font.offset]
+x = 1
+y = 0
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Shift|Control"
+
+[scrolling]
+#auto_scroll = false
+history = 1000
+multiplier = 3
+
+[window]
+class = "Alacritty"
+decorations = "full"
+
+[window.padding]
+x = 8
+y = 2

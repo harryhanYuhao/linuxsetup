@@ -9,15 +9,17 @@ read -p "[y]es/[n]o: " buf
 if [[ ! "${buf}" == "y" ]]; then
 	exit 1
 fi
-
 unset buf
 
-pm=dnf
+pm=apt
+echo "Use ${pm} as package manager"
 
-echo "Use dnf as package manager"
-
-echo "Updating System"
-sudo $pm update -y && sudo $pm upgrade -y
-
-apps="neovim zathura zathura-pdf-poppler g++ clang clang-devel clang-analyzer clang-tools-extra clang-format assimp assimp-devel mesa-libGL-devel freeglut freeglut-devel"
-sudo ${pm} install ${apps} -y
+if [[ "$pm" == "dnf" ]]; then
+	echo "Updating System"
+	sudo dnf update -y && sudo $pm upgrade -y
+	apps_dnf="neovim zathura zathura-pdf-poppler g++ clang clang-devel clang-analyzer clang-tools-extra clang-format assimp assimp-devel mesa-libGL-devel freeglut freeglut-devel"
+	sudo ${pm} install ${apps_dnf} -y
+elif [[ "$pm" == "apt" ]]; then
+	apps_apt="zathura zathura-pdf-poppler g++ clang clang-format python3 mesa-utils freeglut3-dev libglew-dev"
+	sudo ${pm} install ${apps_apt} -y
+fi

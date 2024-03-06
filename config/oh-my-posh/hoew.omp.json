@@ -3,7 +3,6 @@
     "blocks": [
       {
         "alignment": "left",
-        "newline": true,
         "segments": [
           {
             "foreground": "#FFBD00",
@@ -112,7 +111,7 @@
     "console_title_template": "{{ .Folder }}",
     "transient_prompt": {
       "background": "transparent",
-      "foreground": "#FEF5ED",
+      "foreground": "#F2F580",
       "template": "\ue285 "
     },
     "version": 2

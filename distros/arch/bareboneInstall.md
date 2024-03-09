@@ -6,7 +6,7 @@
 
 #### Set fonts
 
-If the fonts are too small, to save your eyes you can set a bigger font by `setfont sun12x22`. (with an x letter)
+If the fonts are too small, to save your eyes you can set a bigger font by `setfont sun12x22`. (with an x letter) Another good font is `ter-132b`.
 
 #### Set brightness
 
@@ -18,7 +18,13 @@ The partition of the disk depends on the booting method.
 
 It is recommanded to use UEFI for all modern hardware (since 2015). Only consider bios boot if your hardware dates before that.
 
+I recommand to 
 
+1. wipe the disk with `wipefs --all /dev/<device>`
+1. Partition it with `cfdisk /dev/<device>`
+1. Select appropriate partition type in cfdisk according to installation guide.
+1. format the disk with mkfs.ext4 
+1. enable swap
 
 ### Mount the Partition
 
@@ -44,7 +50,9 @@ Installing the bootloader shall be the last step of installation.
 
 #### Bootloader
 
-I recommend grub as the boot loader. 
+I recommend grub as the boot loader with UEFI.
+
+After installing grub and appropriate packages, there are two lines of commands that needs to run. First, grubinstall and second generate grub config.
 
 #### Network
 

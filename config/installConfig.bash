@@ -1,5 +1,8 @@
 #!/bin/bash
 
+RED="\033[31m"
+NC="\033[0m"
+
 set -e
 
 CheckYes(){
@@ -20,6 +23,8 @@ Help(){
 	echo "-h		show this help message"
 	echo "-i		install the configuration in this folder to system"
 	echo "			it accepts option"
+	echo -e "			Install convenient dot files ${RED}(recommended)${NC}:"
+	echo "				./installConfig.bash -i con"
 	echo "			Installing git configurations:"
 	echo "				./installConfig.bash -i git"
 	echo "-u		update files in this folder with system configuration"
@@ -60,19 +65,54 @@ installGitConfig(){
 	cat gitconfig >> $HOME/.gitconfig
 }
 
+installKittyConfig(){
+	mkdir -p $HOME/.config/kitty/
+	stow -t $HOME/.config/kitty/ -v -S kitty 
+} 
+
+installAlacrittyConfig(){
+	mkdir -p $HOME/.config/alacritty/
+	stow -t $HOME/.config/alacritty/ -v -S alacritty
+}
+
+installi3Config(){
+	mkdir -p $HOME/.config/i3/
+	stow -t $HOME/.config/i3/ -v -S i3
+}
+
+installBashAliases(){
+	mkdir -p $HOME/.bashrc.d/
+	stow -t $HOME/.bashrc.d/ -v -S dot-bashrc.d
+}
+
+installConvenient(){
+	installKittyConfig
+	installAlacrittyConfig
+	installi3Config
+	installBashAliases
+}
+
 InstallAll(){
 	echo Are you sure to install everything?
 	CheckYes
 	installGitconfig
+	installKittyConfig
 }
+
 
 install(){
 	case $OPTARG in
 		"all")
 			InstallAll
 			;;
+		"con")
+			installConvenient	
+			;;
 		"git")
 			installGitConfig
+			;;
+		"kitty")
+			installKittyConfig
 			;;
 		\?)
 			echo "invalid option for install! (following -p"

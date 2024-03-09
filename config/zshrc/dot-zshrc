@@ -109,4 +109,4 @@ if [ -d ~/.bashrc.d ]; then
 	done
 fi
 unset rc
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/hoew.omp.json)"
+#eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/hoew.omp.json)"

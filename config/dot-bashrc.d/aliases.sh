@@ -18,6 +18,7 @@ alias v="nvim"
 alias pyvenv="source .venv/bin/activate"
 alias py="python3"
 alias vpnuoe="sudo openfortivpn remote.net.ed.ac.uk:8443 -u s2162783"
+alias gaa="git add --all"
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"

@@ -85,11 +85,16 @@ installBashAliases(){
 	stow -t $HOME/.bashrc.d/ -v -S dot-bashrc.d
 }
 
+installZshconfig() {
+	stow -t $HOME/ -v -S --dotfiles zshrc/
+}
+
 installConvenient(){
 	installKittyConfig
 	installAlacrittyConfig
 	installi3Config
 	installBashAliases
+	installZshconfig
 }
 
 InstallAll(){
@@ -113,6 +118,9 @@ install(){
 			;;
 		"kitty")
 			installKittyConfig
+			;;
+		"zsh")
+			installZshconfig
 			;;
 		\?)
 			echo "invalid option for install! (following -p"

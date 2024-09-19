@@ -142,7 +142,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # for_window [class="firefox"] move container to workspace 2
 exec i3-msg 'workspace 3; exec /usr/bin/firefox;'
-
+exec i3-msg 'workspace 9; exec /usr/bin/clash-verge;'
 exec i3-msg 'workspace 2; exec kitty; workspace 2'
 # exec i3-msg 'workspace 4:ws4; exec /usr/bin/firefox'
 

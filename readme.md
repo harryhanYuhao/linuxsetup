@@ -1,6 +1,33 @@
 # Linux Setup
 
-This repo contains my linux setup. The ultimate goal is to create one executable bash script (or other script) which will create a working linux desktop environment at one execution. 
+This repo contains my linux setup. 
+The ultimate goal is to create one executable script that will replicate my working linux desktop environment at one execution. 
+However, due to the idiosyncracies of different OS and software, one unifying script is difficult. 
+So far one must download softwares and copy each config file by hand.
+
+## Recommanded Softwares
+
+### Utilities
+
+- firefox
+- neovim
+- kitty
+- clash 
+- clash-verge
+
+### WM and Customisation
+
+### X
+
+- i3
+- dmenu
+
+# Wayland
+
+- sway
+- hyprpland
+- wofi 
+- swaylock
 
 ## Config Files
 

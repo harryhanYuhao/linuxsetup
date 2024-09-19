@@ -1,6 +1,3 @@
-# I use tide prompt
-# fisher install IlanCosman/tide@v6 
-# tide configure # for configuration
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -22,23 +19,6 @@ set -U GTK_IM_MODULE fcitx
 set -U QT_IM_MODULE fcitx
 set -U SDL_IM_MODULE fcitx
 set -U XMODIFIERS @im=fcitx
-
-#function mkcd
-#    switch "$argv[1]"
-#        case */..|*/../
-#            cd -- "$argv[1]"
-#        case '/*/../*'
-#            set dir (dirname "$argv[1]"); cd "$dir/../" && mkdir -p "./(basename "$argv[1]" | sed 's|..\/||')" && cd -- "$argv[1]"
-#        case '/*'
-#            mkdir -p "$argv[1]"; cd "$argv[1]"
-#        case '*/../*'
-#            set dir (dirname "$argv[1]"); cd "$dir/../" && mkdir -p "./(basename "$argv[1]" | sed 's|..\/||')" && cd "./$argv[1]"
-#        case '../*'
-#            cd ..; mkdir -p (echo "$argv[1]" | sed 's|^..\/||') && cd "$argv[1]"
-#        case '*'
-#            mkdir -p "./$argv[1]"; cd "./$argv[1]"
-#    end
-#end
 
 function mkcd_function
   mkdir -p $argv
@@ -64,14 +44,15 @@ alias git-init="git init; echo -e '*.out\n*.o\n*.txt' >> .gitignore"
 alias ls="exa"
 alias ll="exa -stime -l"
 alias cwall="bash ~/.bashrc.cmd.d/changeWallpaper.sh"
-alias v="NVIM_APPNAME=mynvimconfig nvim"
 alias py="python3"
 alias vpnuoe="sudo openfortivpn remote.net.ed.ac.uk:8443 -u s2162783"
 alias gaa="git add --all"
 alias gcm="git commit -m"
+alias gst="git status"
 alias carc="cargo check"
 alias carr="cargo run"
 
+alias v="NVIM_APPNAME=mynvimconfig nvim"
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 

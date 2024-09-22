@@ -24,8 +24,8 @@ alias pyvenv=pyvenv_function
 
 alias c="clear"
 alias git-init="git init; echo -e '*.out\n*.o\n*.txt' >> .gitignore"
-alias ls="exa"
-alias ll="exa -stime -l"
+alias ls="eza"
+alias ll="eza -stime -l"
 alias cwall="bash ~/.bashrc.cmd.d/changeWallpaper.sh"
 alias v="NVIM_APPNAME=mynvimconfig nvim"
 alias py="python3"

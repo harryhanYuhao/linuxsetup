@@ -13,11 +13,13 @@ pyvenv_function () {
 	if [ -d .venv ]; then
 		echo "Activating virtual environment"
 		source .venv/bin/activate
+		echo "To deactivate the virtual environment, run 'deactivate'"
 	else	
 		echo "Creating virtual environment"
 		python3 -m venv .venv
 		echo "Activating virtual environment"
 		source .venv/bin/activate
+		echo "To deactivate the virtual environment, run 'deactivate'"
 	fi
 }
 alias pyvenv=pyvenv_function

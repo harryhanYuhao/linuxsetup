@@ -16,7 +16,7 @@ pyvenv_function () {
 	else	
 		echo "Creating virtual environment"
 		python3 -m venv .venv
-		echo "Creating virtual environment"
+		echo "Activating virtual environment"
 		source .venv/bin/activate
 	fi
 }

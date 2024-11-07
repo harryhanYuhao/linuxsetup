@@ -55,4 +55,4 @@ alias carr="cargo run"
 alias v="NVIM_APPNAME=mynvimconfig nvim"
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias lazyvim="NVIM_APPNAME=lazyvim nvim"
-
+alias archupdate="sudo pacman -Syu --noconfirm && sudo pacman -S linux --noconfirm"

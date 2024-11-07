@@ -50,3 +50,4 @@ fi
 
 alias nvchad="NVIM_APPNAME=nvchad nvim"
 alias lazyvim="NVIM_APPNAME=lazyvim nvim"
+alias archupdate="sudo pacman -Syu --noconfirm && sudo pacman -S linux --noconfirm"

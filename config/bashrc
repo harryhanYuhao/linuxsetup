@@ -27,10 +27,6 @@ fi
 unset rc
 
 export PATH=$PATH:/home/hhyh/.graalvm-jdk-20.0.1+9.1/bin
-export JAVA_HOME=/home/hhyh/.graalvm-jdk-20.0.1+9.1
-
-export DOTNET_ROOT=/usr/bin/dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 color_prompt=yes
 

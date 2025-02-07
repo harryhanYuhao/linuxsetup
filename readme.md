@@ -1,38 +1,40 @@
 # Linux Setup
 
-This repo contains my linux setup. 
-The ultimate goal is to create one executable script that will replicate my working linux desktop environment at one execution. 
-However, due to the idiosyncracies of different OS and software, one unifying script is difficult. 
-So far one must download softwares and copy each config file by hand.
+In this repo are my personal configurations for linux system. 
+All configurations are here except nvim, which is placed in a separate repository named `mynvimconfig`.
 
-## Recommanded Softwares
+This repo enables me to reproduce my customed computer settings almost identically in a brandnew device by copying and pasting files into their proper paths. 
+Those regarding copying and pasting some files tedios are advised to check out NixOs.
 
-### Utilities
+A list of packages I often used are included here for sake of conveniently downloading them at once. 
 
-- firefox
-- neovim
-- kitty
-- clash 
-- clash-verge
+__arch packages:__
 
-### WM and Customisation
+For wayland
+```
+wl-clipboard
+wl-copy
+zathura-pdf-poppler
+zathura
+chromium
+texlive
+base-devel
+debugedit
+yay
+code
+$(pacman -Sgq nerd-fonts)
+fzf
+swaylock
+swayidle
+mcfly
+fisher
+gammastep
+```
 
-### X
+Copy all of these names, and use `echo`, `tr`, and `xargs` to install them in one fell-swoop. For example
 
-- i3
-- dmenu
-
-# Wayland
-
-- sway
-- hyprpland
-- wofi 
-- swaylock
-
-## Config Files
-
-The config files of certain application is included. To use them, all files and directories under the directory `config` shall be moved to `~/.config`.
-
-### i3
-
-The i3 config consists of a config file and a set of script. It also depends on the an executable shell script `i3CustomLock.sh`, which is under the directory `bin`. To config may not work right out of the box; certian lines which may cause problem are marked with `note:` in the configuration file.
+```sh
+echo "swayidle
+mcfly
+fisher " | tr '\n' ' ' | xargs sudo pacman -S --needed --noconfirm
+```

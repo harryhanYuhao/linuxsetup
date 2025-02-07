@@ -10,6 +10,7 @@ font pango:monospace 11
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+exec gammastep
 exec nm-applet
 
 # Use pactl to adjust volume in PulseAudio.

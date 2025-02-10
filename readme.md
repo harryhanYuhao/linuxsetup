@@ -29,6 +29,7 @@ swayidle
 mcfly
 fisher
 gammastep
+openfortivpn
 ```
 
 Copy all of these names, and use `echo`, `tr`, and `xargs` to install them in one fell-swoop. For example
@@ -37,4 +38,23 @@ Copy all of these names, and use `echo`, `tr`, and `xargs` to install them in on
 echo "swayidle
 mcfly
 fisher " | tr '\n' ' ' | xargs sudo pacman -S --needed --noconfirm
+```
+
+## Common Issues 
+
+### VPN 
+
+Connecting VPN on Linux may be difficult if the desired VPN agent does not have Linux support. 
+There are several tweeks, however.
+
+If the VPN network utilised fortivpn, (most universities' vpn do), use `openfortivpn` on Linux. 
+
+```sh
+sudo openfortivpn remote.net.ed.ac.uk:8443 -u <username>
+````
+
+On arch you many need to manually enabled the resloved service by 
+
+```sh 
+sudo systemctl start systemd-resolved.service
 ```

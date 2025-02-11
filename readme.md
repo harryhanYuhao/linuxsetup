@@ -40,6 +40,12 @@ mcfly
 fisher " | tr '\n' ' ' | xargs sudo pacman -S --needed --noconfirm
 ```
 
+## Other configs 
+
+Firefox 
+
+In `about:config`, `browser.download.open_pdf_attachments_inline` set to true.
+
 ## Common Issues 
 
 ### VPN 

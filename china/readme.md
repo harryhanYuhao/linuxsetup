@@ -56,3 +56,7 @@ replace-with = 'ustc'
 registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 ```
 
+## Python 
+
+Use `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple`.
+`-i` flags modifies the base url of pip index.

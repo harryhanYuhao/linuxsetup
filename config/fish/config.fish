@@ -20,6 +20,9 @@ set -U QT_IM_MODULE fcitx
 set -U SDL_IM_MODULE fcitx
 set -U XMODIFIERS @im=fcitx
 
+# GPG key
+set -x GPG_TTY (tty)
+
 function mkcd_function
   mkdir -p $argv
   and cd $argv

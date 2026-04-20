@@ -52,3 +52,6 @@ fi
 # PS1='\u@\h:\w\$\n'
 
 unset color_prompt force_color_prompt
+
+# GPG key
+export GPG_TTY=$(tty)

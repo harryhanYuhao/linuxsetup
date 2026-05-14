@@ -7,8 +7,8 @@
 	cm = commit
 	co = checkout
 	br = branch
-    lg1 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
-    lg2 = "log --graph --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ai)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+    lg1 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(cyan)%s%C(reset) %C(dim green)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+    lg2 = "log --graph --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ai)%C(reset) %C(cyan)%s%C(reset) %C(dim green)- %an%C(reset)%C(auto)%d%C(reset)' --all"
     lg = lg1
 
 [color "diff-highlight"]
@@ -25,4 +25,14 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-
+[user]
+	email = harryhan912@gmail.com
+	name = Yuhao Han
+	signingkey = 361F582132BAF8CB
+[http]
+	lowSpeedTime = 120
+	lowSpeedLimit = 500
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
